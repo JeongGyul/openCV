@@ -1,12 +1,15 @@
 import cv2
 
-img = cv2.imread('cat.bmp', cv2.IMREAD_COLOR)
+img1 = cv2.imread('dog.bmp')
 
-#ndarray <--------- n-dimensional array (n 차원의 배열)
-print(type(img))   # img 변수에 저장된 데이터의 타입(자료형)
-print(img.shape)   # img 변수가 어떤 구조인지 확인
+img2 = img1         # 올바르지 않음
+img3 = img1.copy()  # 올바른 복사 방법
 
-cv2.namedWindow('cat')
-cv2.imshow('cat', img)
+img1[:, :] = (0, 255, 255)  # 노란색
+
+cv2.imshow('image #1', img1)
+cv2.imshow('image #2', img2)
+cv2.imshow('image #3', img3)
+
 cv2.waitKey()
 cv2.destroyAllWindows()
