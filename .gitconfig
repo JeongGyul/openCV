@@ -1,0 +1,21 @@
+[core]
+	editor = code --wait
+	autocrlf = true
+	safecrlf = false
+[user]
+	name = JeongGyul
+	email = jjascd@naver.com
+[init]
+	defaultbranch = main
+[alias]
+	st = status
+	sts = status -s
+	lg1 = log --oneline
+	lgg1 = log --graph --oneline
+	lgg = log --graph
+	lgg1a = log --graph --oneline --all
+[difftool "sourcetree"]
+	cmd = "'' "
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true
